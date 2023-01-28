@@ -130,7 +130,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Autowired
   private RestfulAccessDeniedHandler restfulAccessDeniedHandler;
 
-
   @Override
   public void configure(WebSecurity web) throws Exception {
     web.ignoring().antMatchers(
@@ -167,7 +166,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //需要认证
         .anyRequest()
         .authenticated()
-
         .and()
         .headers()
         //禁用缓存

@@ -17,26 +17,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
-//  @Override
-//  public void commence(HttpServletRequest request, HttpServletResponse response,
-//      AuthenticationException authException) throws IOException, ServletException {
-//    response.setCharacterEncoding("utf-8");
-//    response.setContentType("application/json");
-//    PrintWriter out = response.getWriter();
-//    RespBean bean = RespBean.error("尚未登录, 请登录!");
-//    bean.setCode(401);
-//    out.write(new ObjectMapper().writeValueAsString(bean));
-//    out.flush();
-//    out.close();
-//  }
-
   @Override
   public void commence(HttpServletRequest request, HttpServletResponse response,
       AuthenticationException authException) throws IOException, ServletException {
-    response.setCharacterEncoding("UTF-8");
+    response.setCharacterEncoding("utf-8");
     response.setContentType("application/json");
     PrintWriter out = response.getWriter();
-    RespBean bean = RespBean.error("RestAuthorizationEntryPoint + 尚未登录, 请登录!");
+    RespBean bean = RespBean.error("尚未登录, 请登录!");
     bean.setCode(401);
     out.write(new ObjectMapper().writeValueAsString(bean));
     out.flush();

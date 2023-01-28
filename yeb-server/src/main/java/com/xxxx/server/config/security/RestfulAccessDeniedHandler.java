@@ -17,30 +17,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class RestfulAccessDeniedHandler implements AccessDeniedHandler {
 
-//  @Override
-//  public void handle(HttpServletRequest request, HttpServletResponse response,
-//      AccessDeniedException accessDeniedException) throws IOException, ServletException {
-//    response.setCharacterEncoding("utf-8");
-//    response.setContentType("application/json");
-//    PrintWriter out = response.getWriter();
-//    RespBean bean =RespBean.error("权限不足，请联系管理员!");
-//    bean.setCode(403);
-//    out.write(new ObjectMapper().writeValueAsString(bean));
-//    out.flush();
-//    out.close();
-//
-//  }
-
   @Override
   public void handle(HttpServletRequest request, HttpServletResponse response,
-      AccessDeniedException e) throws IOException, ServletException {
-    response.setCharacterEncoding("UTF-8");
+      AccessDeniedException accessDeniedException) throws IOException, ServletException {
+    response.setCharacterEncoding("utf-8");
     response.setContentType("application/json");
     PrintWriter out = response.getWriter();
-    RespBean bean = RespBean.error("RestfulAccessDeniedHandler + 权限不足, 请联系管理员!");
+    RespBean bean =RespBean.error("权限不足，请联系管理员!");
     bean.setCode(403);
     out.write(new ObjectMapper().writeValueAsString(bean));
     out.flush();
     out.close();
+
   }
 }
