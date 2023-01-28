@@ -128,6 +128,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
   @Autowired
   private IAdminService adminService;
   @Autowired
@@ -176,7 +177,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //禁用缓存
         .cacheControl();
     //添加jwt登录授权过滤器或拦截器
-    http.addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+    http.addFilterBefore(jwtAuthenticationTokenFilter(),
+        UsernamePasswordAuthenticationFilter.class);
     //添加自定义未授权和未登录结果返回
     http.exceptionHandling()
         .accessDeniedHandler(restfulAccessDeniedHandler)
