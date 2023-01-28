@@ -1,5 +1,6 @@
 package com.xxxx.server.controller;
 
+
 import com.xxxx.server.pojo.Admin;
 import com.xxxx.server.pojo.AdminLoginParam;
 import com.xxxx.server.pojo.RespBean;
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(tags = "LoginController")
 @RestController
+@Api(tags = "LoginController")
 public class LoginController {
 
   @Autowired
@@ -24,7 +25,8 @@ public class LoginController {
   @ApiOperation(value = "登录之后返回token")
   @PostMapping("/login")
   public RespBean login(@RequestBody AdminLoginParam adminLoginParam, HttpServletRequest request) {
-    return adminService.login(adminLoginParam.getUsername(), adminLoginParam.getPassword(), request);
+    return adminService.login(adminLoginParam.getUsername(), adminLoginParam.getPassword(),
+        request);
   }
 
   @ApiOperation(value = "获取当前登录用户的信息")
@@ -33,16 +35,17 @@ public class LoginController {
     if (principal == null) {
       return null;
     }
+    //获取用户名
     String username = principal.getName();
     Admin admin = adminService.getAdminByUserName(username);
-    admin.setPassword(null);
+    admin.setPassword(null); //设置密码为空
     return admin;
   }
 
   @ApiOperation(value = "退出登录")
   @PostMapping("/logout")
-  public RespBean logout() {
-    return RespBean.success("注销成功！");
+  public RespBean logout(){
+    return RespBean.success("注销成功!");
   }
 
 }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "HelloController")
 public class HelloController {
 
-  @ApiOperation(value = "测试")
+  @ApiOperation(value = "心跳测试")
   @GetMapping("/hello")
   public String hello() {
     return "hello world";

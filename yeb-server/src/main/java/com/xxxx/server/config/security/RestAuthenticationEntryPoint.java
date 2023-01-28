@@ -12,7 +12,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
 /**
- *当未登录或token失效时访问接口时，自定义返回的结果
+ * 当未登录或token失效时访问接口时，自定义返回的结果
  */
 @Component
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {

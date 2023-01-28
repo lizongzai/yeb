@@ -12,7 +12,7 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
 
 /**
- *当放翁接口无权限时,自定义返回的结果
+ * 当放翁接口无权限时,自定义返回的结果
  */
 @Component
 public class RestfulAccessDeniedHandler implements AccessDeniedHandler {
@@ -23,7 +23,7 @@ public class RestfulAccessDeniedHandler implements AccessDeniedHandler {
     response.setCharacterEncoding("utf-8");
     response.setContentType("application/json");
     PrintWriter out = response.getWriter();
-    RespBean bean =RespBean.error("权限不足，请联系管理员!");
+    RespBean bean = RespBean.error("权限不足，请联系管理员!");
     bean.setCode(403);
     out.write(new ObjectMapper().writeValueAsString(bean));
     out.flush();

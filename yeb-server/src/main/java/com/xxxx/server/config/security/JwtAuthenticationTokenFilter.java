@@ -18,6 +18,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
  * 自定义Jwt授权拦截器
  */
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
+
   //Jwt存储的请求头
   @Value("${jwt.tokenHeader}")
   private String tokenHeader;
