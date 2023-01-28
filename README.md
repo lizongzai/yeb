@@ -18,3 +18,65 @@
 - Mail：发送邮件
 - WebSocket：在线聊天功能
 - FastDFS：文件服务器，静态资源相应的文件。
+
+
+### 2. 数据库
+2.1 创建数据库
+![image](https://user-images.githubusercontent.com/49580847/215239268-5aaa565a-ad14-42a2-aacc-af731c84cada.png)
+
+$ docker run -d -p 3306:3306 --name mysql -v /mysqldata/mysql/log:/var/log/mysql  -v /mysqldata/mysql/data:/var/lib/mysql  -v /mysqldata/mysql/conf:/etc/mysql -e MYSQL_ROOT_PASSWORD=password   mysql:5.7
+
+$ docker exec -it mysql-master /bin/bash
+
+mysql -u root -p
+
+create databases yeb;
+
+show databases;
+
+use yeb;
+
+2.2 初始化数据库
+在mysqldb容器里执行SQL语句./database/yeb.sql
+
+
+### 3. 创建yeb项目
+
+#### 3.1 父工程
+
+
+`父工程：引入pom依赖包`
+
+```xaml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>yeb-server</module>
+    <module>yeb-generator</module>
+  </modules>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.7</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>com.xxxx</groupId>
+  <artifactId>yeb</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>yeb</name>
+  <description>demo project for spring boot</description>
+
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+</project>
+
+```
+
+
