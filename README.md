@@ -23,12 +23,18 @@
 ### 2. 数据库
 2.1 创建数据库
 # 使用容器创建mysql数据库
+![image](https://user-images.githubusercontent.com/49580847/215239268-5aaa565a-ad14-42a2-aacc-af731c84cada.png)
+
 $ docker run -d -p 3306:3306 --name mysql -v /mysqldata/mysql/log:/var/log/mysql  -v /mysqldata/mysql/data:/var/lib/mysql  -v /mysqldata/mysql/conf:/etc/mysql -e MYSQL_ROOT_PASSWORD=password   mysql:5.7
 
 $ docker exec -it mysql-master /bin/bash
+
 mysql -u root -p
+
 create databases yeb;
+
 show databases;
+
 use yeb;
 
 2.2 初始化数据库
