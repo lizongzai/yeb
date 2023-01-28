@@ -14,18 +14,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * 登录功能
- */
-
-@RestController
 @Api(tags = "LoginController")
+@RestController
 public class LoginController {
 
   @Autowired
   private IAdminService adminService;
 
-  @ApiOperation(value = "用户登录之后返回token")
+  @ApiOperation(value = "登录之后返回token")
   @PostMapping("/login")
   public RespBean login(@RequestBody AdminLoginParam adminLoginParam, HttpServletRequest request) {
     return adminService.login(adminLoginParam.getUsername(), adminLoginParam.getPassword(), request);
@@ -34,22 +30,19 @@ public class LoginController {
   @ApiOperation(value = "获取当前登录用户的信息")
   @GetMapping("/admin/info")
   public Admin getAdminInfo(Principal principal) {
-    //判断principal对象是否为空
     if (principal == null) {
       return null;
     }
-    //获取用户名
     String username = principal.getName();
-    Admin admin = adminService.getAdminByUsername(username);
+    Admin admin = adminService.getAdminByUserName(username);
     admin.setPassword(null);
     return admin;
-
   }
 
   @ApiOperation(value = "退出登录")
   @PostMapping("/logout")
   public RespBean logout() {
-    return RespBean.success("注销成功");
+    return RespBean.success("注销成功！");
   }
 
 }

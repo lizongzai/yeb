@@ -31,5 +31,5 @@ public interface IAdminService extends IService<Admin> {
    * @param username
    * @return
    */
-  Admin getAdminByUsername(String username);
+  Admin getAdminByUserName(String username);
 }

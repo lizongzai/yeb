@@ -12,6 +12,20 @@ import lombok.experimental.Accessors;
  * @author lizongzai
  * @since 1.0.0
  */
+//@Data
+//@EqualsAndHashCode(callSuper = false)
+//@Accessors(chain = true)
+//@ApiModel(value = "AdminLogin对象", description = "")
+//public class AdminLoginParam {
+//
+//  @ApiModelProperty(value = "用户名", required = true)
+//  private String username;
+//  @ApiModelProperty(value = "密码", required = true)
+//  private String password;
+//
+//}
+
+
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
@@ -24,3 +38,4 @@ public class AdminLoginParam {
   private String password;
 
 }
+
