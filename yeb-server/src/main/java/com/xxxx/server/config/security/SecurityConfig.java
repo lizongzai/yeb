@@ -121,6 +121,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+/**
+ * @Description //TODO security配置类
+ * @Author lizongzai
+ * @Since 1.0.0
+ */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Autowired
