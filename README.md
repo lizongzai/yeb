@@ -26,10 +26,10 @@
 $ docker run -d -p 3306:3306 --name mysql -v /mysqldata/mysql/log:/var/log/mysql  -v /mysqldata/mysql/data:/var/lib/mysql  -v /mysqldata/mysql/conf:/etc/mysql -e MYSQL_ROOT_PASSWORD=password   mysql:5.7
 
 $ docker exec -it mysql-master /bin/bash
-# mysql -u root -p
-# create databases yeb;
-# show databases;
-# use yeb
+mysql -u root -p
+create databases yeb;
+show databases;
+use yeb;
 
 2.2 初始化数据库
 在mysqldb容器里执行SQL语句./database/yeb.sql
