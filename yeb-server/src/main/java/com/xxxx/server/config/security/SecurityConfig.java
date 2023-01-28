@@ -102,8 +102,8 @@
 //
 //
 //}
-
 package com.xxxx.server.config.security;
+
 
 import com.xxxx.server.pojo.Admin;
 import com.xxxx.server.service.IAdminService;
@@ -129,6 +129,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
   @Autowired
   private RestfulAccessDeniedHandler restfulAccessDeniedHandler;
+
 
   @Override
   public void configure(WebSecurity web) throws Exception {
@@ -166,6 +167,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //需要认证
         .anyRequest()
         .authenticated()
+
         .and()
         .headers()
         //禁用缓存
