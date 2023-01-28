@@ -39,3 +39,45 @@ use yeb;
 
 2.2 初始化数据库
 在mysqldb容器里执行SQL语句./database/yeb.sql
+
+
+### 3. 创建yeb项目
+
+#### 3.1 父工程
+
+
+`父工程：引入pom依赖包`
+
+```xaml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>yeb-server</module>
+    <module>yeb-generator</module>
+  </modules>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.7</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>com.xxxx</groupId>
+  <artifactId>yeb</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>yeb</name>
+  <description>demo project for spring boot</description>
+
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+</project>
+
+```
+
+
