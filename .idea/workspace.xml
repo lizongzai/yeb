@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="v3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/AdminRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/AdminRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/AppraiseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/AppraiseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeEcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/EmployeeEcController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeRemoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/EmployeeRemoveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeTrainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/EmployeeTrainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/JoblevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/JoblevelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/MailLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/MailLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/MenuRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/MenuRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/NationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/NationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/OplogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/OplogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/PoliticsStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/PoliticsStatusController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/PositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/PositionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/SalaryAdjustController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/SalaryAdjustController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/SalaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/SalaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/SysMsgContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/SysMsgContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/SysMsgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/controller/SysMsgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeEcMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/EmployeeEcMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/AdminLoginParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/AdminLoginParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeEcServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeEcServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="v4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +144,7 @@
       <updated>1674108405490</updated>
       <workItem from="1674108406663" duration="4433000" />
       <workItem from="1674113153641" duration="43720000" />
-      <workItem from="1674811256111" duration="8521000" />
+      <workItem from="1674811256111" duration="8821000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <created>1674813511460</created>
@@ -258,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674873547224</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="v4">
+      <created>1674875124030</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674875124030</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +258,7 @@
     <MESSAGE value="v1" />
     <MESSAGE value="v2" />
     <MESSAGE value="v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="v3" />
+    <MESSAGE value="v4" />
+    <option name="LAST_COMMIT_MESSAGE" value="v4" />
   </component>
 </project>
