@@ -42,7 +42,8 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
   @Override
   public List<Menu> getMenusByAdminId() {
     //获取用户ID
-    Integer adminId = ((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId();
+    Integer adminId = ((Admin) SecurityContextHolder.getContext().getAuthentication()
+        .getPrincipal()).getId();
 
     ValueOperations<String, Object> valueOperations = redisTemplate.opsForValue();
     //从redis读取菜单数据
@@ -51,7 +52,7 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
     if (CollectionUtils.isEmpty(menus)) {
       menus = menuMapper.getMenusByAdminId(adminId);
       //将菜单数据设置在redis中
-      valueOperations.set("menu_" + adminId,menus);
+      valueOperations.set("menu_" + adminId, menus);
     }
     //返回结果
     return menus;
