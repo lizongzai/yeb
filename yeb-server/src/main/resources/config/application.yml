@@ -14,7 +14,7 @@ spring:
     password: password
     redis:
       timeout: 10000ms
-      host: localhost
+      host: 192.168.126.57
       port: 6379
       database: 0 # 选择哪个库，默认0库
       password: root

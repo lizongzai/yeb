@@ -2,6 +2,7 @@ package com.xxxx.server.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.xxxx.server.pojo.Menu;
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +14,5 @@ import com.xxxx.server.pojo.Menu;
  */
 public interface MenuMapper extends BaseMapper<Menu> {
 
+  List<Menu> getMenusByAdminId(Integer adminId);
 }
