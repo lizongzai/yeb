@@ -19,16 +19,18 @@
 
   <!--  根据用户id获取菜单列表-->
   <resultMap id="Menus" type="com.xxxx.server.pojo.Menu" extends="BaseResultMap">
-    <id column="id2" property="id"/>
-    <result column="url2" property="url"/>
-    <result column="path2" property="path"/>
-    <result column="component2" property="component"/>
-    <result column="name2" property="name"/>
-    <result column="iconCls2" property="iconCls"/>
-    <result column="keepAlive2" property="keepAlive"/>
-    <result column="requireAuth2" property="requireAuth"/>
-    <result column="parentId2" property="parentId"/>
-    <result column="enabled2" property="enabled"/>
+    <collection property="children" ofType="com.xxxx.server.pojo.Menu">
+      <id column="id2" property="id"/>
+      <result column="url2" property="url"/>
+      <result column="path2" property="path"/>
+      <result column="component2" property="component"/>
+      <result column="name2" property="name"/>
+      <result column="iconCls2" property="iconCls"/>
+      <result column="keepAlive2" property="keepAlive"/>
+      <result column="requireAuth2" property="requireAuth"/>
+      <result column="parentId2" property="parentId"/>
+      <result column="enabled2" property="enabled"/>
+    </collection>
   </resultMap>
 
   <!-- 通用查询结果列 -->

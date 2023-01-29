@@ -47,7 +47,7 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
     ValueOperations<String, Object> valueOperations = redisTemplate.opsForValue();
     //从redis读取菜单数据
     List<Menu> menus = (List<Menu>) valueOperations.get("menu_" + adminId);
-    //若redis缓存为空,则从数据库获取菜单数
+    //若redis缓存为空,则从数据库获取菜单数据
     if (CollectionUtils.isEmpty(menus)) {
       menus = menuMapper.getMenusByAdminId(adminId);
       //将菜单数据设置在redis中
