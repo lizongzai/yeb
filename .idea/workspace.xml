@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="v6">
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="v7">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/exception/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/PositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/PositionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +155,7 @@
       <workItem from="1674811256111" duration="10424000" />
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
-      <workItem from="1674886841671" duration="39775000" />
+      <workItem from="1674886841671" duration="41774000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <created>1674813511460</created>
@@ -395,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675062262454</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="v7">
+      <created>1675064452760</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1675064452760</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,6 +426,7 @@
     <MESSAGE value="v4" />
     <MESSAGE value="v5" />
     <MESSAGE value="v6" />
-    <option name="LAST_COMMIT_MESSAGE" value="v6" />
+    <MESSAGE value="v7" />
+    <option name="LAST_COMMIT_MESSAGE" value="v7" />
   </component>
 </project>
