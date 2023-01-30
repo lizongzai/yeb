@@ -6,8 +6,10 @@ import com.xxxx.server.config.security.JwtTokenUtil;
 import com.xxxx.server.mapper.AdminMapper;
 import com.xxxx.server.pojo.Admin;
 import com.xxxx.server.pojo.RespBean;
+import com.xxxx.server.pojo.Role;
 import com.xxxx.server.service.IAdminService;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -97,4 +99,5 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     return adminMapper.selectOne(
         new QueryWrapper<Admin>().eq("username", username).eq("enabled", true));
   }
+
 }

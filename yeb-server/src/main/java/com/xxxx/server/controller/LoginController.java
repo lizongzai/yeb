@@ -5,6 +5,7 @@ import com.xxxx.server.pojo.Admin;
 import com.xxxx.server.pojo.AdminLoginParam;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.service.IAdminService;
+import com.xxxx.server.service.IRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.security.Principal;
@@ -21,6 +22,8 @@ public class LoginController {
 
   @Autowired
   private IAdminService adminService;
+  @Autowired
+  private IRoleService roleService;
 
   @ApiOperation(value = "登录之后返回token")
   @PostMapping("/login")
@@ -40,6 +43,7 @@ public class LoginController {
     String username = principal.getName();
     Admin admin = adminService.getAdminByUserName(username);
     admin.setPassword(null); //设置密码为空
+    admin.setRoles(roleService.getRolesByAdminId(admin.getId()));
     return admin;
   }
 

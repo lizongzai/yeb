@@ -3,6 +3,8 @@ package com.xxxx.server.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xxxx.server.pojo.Admin;
 import com.xxxx.server.pojo.RespBean;
+import com.xxxx.server.pojo.Role;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -33,4 +35,5 @@ public interface IAdminService extends IService<Admin> {
    * @return
    */
   Admin getAdminByUserName(String username);
+
 }
