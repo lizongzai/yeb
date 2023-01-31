@@ -30,7 +30,55 @@ $ docker exec -it mysql-master /bin/bash
 
 mysql -u root -p
 
-3.2 子工程
+create databases yeb;
+
+show databases;
+
+use yeb;
+
+2.2 初始化数据库
+在mysqldb容器里执行SQL语句./database/yeb.sql
+
+
+### 3. 创建yeb项目
+
+#### 3.1 父工程
+
+
+`父工程：引入pom依赖包`
+
+```xaml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>yeb-server</module>
+    <module>yeb-generator</module>
+  </modules>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.7</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>com.xxxx</groupId>
+  <artifactId>yeb</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>yeb</name>
+  <description>demo project for spring boot</description>
+
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+</project>
+
+```
+#### 3.2 子工程
 
 
 `application.yml`
@@ -122,53 +170,29 @@ jwt:
 ```
 
 
-create databases yeb;
 
-show databases;
+`创建启动类`
 
-use yeb;
+```java
+package com.xxxx.server;
 
-2.2 初始化数据库
-在mysqldb容器里执行SQL语句./database/yeb.sql
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 启动类
+ * @author lizongzai
+ * @since 1.0.0
+ */
+@SpringBootApplication
+@MapperScan("com.xxxx.server.mapper")
+public class YebApplication {
+  public static void main(String[] args) {
+    SpringApplication.run(YebApplication.class,args);
+  }
 
-### 3. 创建yeb项目
-
-#### 3.1 父工程
-
-
-`父工程：引入pom依赖包`
-
-```xaml
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <modules>
-    <module>yeb-server</module>
-    <module>yeb-generator</module>
-  </modules>
-
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.7</version>
-    <relativePath/> <!-- lookup parent from repository -->
-  </parent>
-
-  <groupId>com.xxxx</groupId>
-  <artifactId>yeb</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>yeb</name>
-  <description>demo project for spring boot</description>
-
-  <properties>
-    <java.version>1.8</java.version>
-  </properties>
-</project>
-
+}
 ```
 
 
