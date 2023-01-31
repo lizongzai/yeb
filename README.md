@@ -30,6 +30,98 @@ $ docker exec -it mysql-master /bin/bash
 
 mysql -u root -p
 
+3.2 子工程
+
+
+`application.yml`
+
+```properties
+server:
+  port: 8081
+
+spring:
+  main:
+    allow-circular-references: true
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/yeb_back?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai"
+    username: root
+    password: password
+    redis:
+      timeout: 10000ms
+      host: localhost
+      port: 6379
+      database: 0 # 选择哪个库，默认0库
+      password: root
+      lettuce:
+        pool:
+          max-active: 1024 # 最大连接数，默认 8
+          max-wait: 10000ms # 最大连接阻塞等待时间，单位毫秒，默认 -1
+          max-idle: 200 # 最大空闲连接，默认 8
+          min-idle: 5
+    # rabbitmq配置
+    rabbitmq:
+      # 用户名
+      username: guest
+      # 密码
+      password: guest
+      # 服务器地址
+      host: localhost
+      # 端口
+      port: 5672
+      # 消息确认回调
+      publisher-confirm-type: correlated
+      # 消息失败回调
+      publisher-returns: true
+
+    hikari:
+      # 连接池名
+      pool-name: DateHikariCP
+      # 最小空闲连接数
+      minimum-idle: 5
+      # 空闲连接存活最大时间，默认值为6000000
+      idle-timeout: 180000
+      # 最大连接数,默认10
+      maximum-pool-size: 10
+      # 从连接池返回的连接的自动提交
+      auto-commit: true
+      # 连接最大存活时间，0表示永久存活，默认1800000(30分钟)
+      max-lifetime: 1800000
+      # 连接超时时间, 默认30000(30秒)
+      connection-timeout: 30000
+      # 测试连接是否可用的查询语句
+      connection-test-query: SELECT 1
+
+# Mybatis-plus配置
+mybatis-plus:
+  # 配置Mapper映射文件
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  #配置mybatis数据返回类型别名
+  type-aliases-package: com.ibm.server.pojo
+  configuration:
+    # 自动驼峰命名
+    map-underscore-to-camel-case: false
+
+# Mybatis SQL打印(方法接口所在的包，不是Mapper.xml所在的包)
+logging:
+  level:
+    com.xxxx.server.mapper: debug
+
+jwt:
+  # Jwt存储的请求头
+  tokenHeader: Authorization
+  # Jwt加密秘钥
+  secret: yeb-secret
+  # Jwt 的超期限时间（60*60）*24
+  expiration: 604800
+  # Jwt负载中拿到开头
+  tokenHead: Bearer
+```
+
+
 create databases yeb;
 
 show databases;
