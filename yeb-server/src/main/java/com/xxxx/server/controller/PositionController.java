@@ -12,6 +12,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -61,7 +62,7 @@ public class PositionController {
 
   @ApiOperation(value = "删除职位信息")
   @DeleteMapping("/{id}")
-  public RespBean removePositionById(Integer id) {
+  public RespBean removePositionById(@PathVariable Integer id) {
     if (positionService.removeById(id)) {
       return RespBean.success("删除成功");
     }

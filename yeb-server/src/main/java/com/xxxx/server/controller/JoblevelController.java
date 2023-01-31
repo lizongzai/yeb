@@ -14,6 +14,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -62,7 +63,7 @@ public class JoblevelController {
 
   @ApiOperation(value = "删除职称信息")
   @DeleteMapping("/{id}")
-  public RespBean removeJobLevelById(Integer id) {
+  public RespBean removeJobLevelById(@PathVariable Integer id) {
     if (joblevelService.removeById(id)) {
       return RespBean.success("删除成功!");
     }
