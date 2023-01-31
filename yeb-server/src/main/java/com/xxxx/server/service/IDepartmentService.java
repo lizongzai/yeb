@@ -36,5 +36,5 @@ public interface IDepartmentService extends IService<Department> {
    * @param id
    * @return
    */
-  RespBean deleteDep(Integer id);
+  RespBean deleteDepartment(Integer id);
 }

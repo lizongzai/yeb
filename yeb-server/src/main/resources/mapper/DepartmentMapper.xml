@@ -46,7 +46,7 @@
   </insert>
 
   <!--  删除部门-->
-  <delete id="deleteDep" statementType="CALLABLE">
+  <delete id="deleteDepartment" statementType="CALLABLE">
     call deleteDep(#{id,mode=IN,jdbcType=INTEGER},#{result,mode=OUT,jdbcType=INTEGER})
   </delete>
 
