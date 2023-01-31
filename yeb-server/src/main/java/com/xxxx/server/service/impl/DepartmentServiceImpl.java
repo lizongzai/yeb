@@ -71,20 +71,9 @@ public class DepartmentServiceImpl extends ServiceImpl<DepartmentMapper, Departm
     } else if (department.getResult() == -1) {
       return RespBean.error("该部门下还有员工,删除失败!");
     } else if (department.getResult() == 1) {
-      RespBean.success("删除成功!");
+      return RespBean.success("删除成功!");
     }
     return RespBean.error("删除失败!");
 
-//    Department department = new Department();
-//    department.setId(id);
-//    departmentMapper.deleteDep(department);
-//    if (-2 == department.getResult()) {
-//      return RespBean.error("该部门下还有子部门, 删除失败!");
-//    } else if (-1 == department.getResult()) {
-//      return RespBean.error("该部门下还有员工,删除失败!");
-//    } else if (1 == department.getResult()) {
-//      return RespBean.success("删除成功!");
-//    }
-//    return RespBean.error("删除失败!");
   }
 }
