@@ -5,6 +5,7 @@ import com.xxxx.server.mapper.PositionMapper;
 import com.xxxx.server.pojo.Position;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.service.IPositionService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -29,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-01-19
  */
 @RestController
+@Api(tags = "PositionController")
 @RequestMapping("/system/basic/pos")
 public class PositionController {
 

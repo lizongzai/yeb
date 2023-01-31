@@ -3,6 +3,7 @@ package com.xxxx.server.controller;
 
 import com.xxxx.server.pojo.Menu;
 import com.xxxx.server.service.IMenuService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-01-19
  */
 @RestController
+@Api(tags = "MenuController")
 @RequestMapping("/system/cfg")
 public class MenuController {
 

@@ -4,6 +4,7 @@ package com.xxxx.server.controller;
 import com.xxxx.server.pojo.Joblevel;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.service.IJoblevelService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.models.auth.In;
@@ -30,6 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2023-01-19
  */
 @RestController
+@Api(tags = "JoblevelController")
 @RequestMapping("/system/basic/joblevel")
 public class JoblevelController {
 
