@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="v14 获取所有员工分页查询供，涉及分页公共返回RespPageBean类、mybatis分页插件配置、全局日期转换格式、employee实体时间格式和外部表或对象处理以及数据库SQL.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/PoliticsStatusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/PoliticsStatusController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,14 +159,7 @@
       <workItem from="1674811256111" duration="10424000" />
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
-      <workItem from="1674886841671" duration="80997000" />
-    </task>
-    <task id="LOCAL-00005" summary="v2">
-      <created>1674870842136</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1674870842136</updated>
+      <workItem from="1674886841671" duration="81610000" />
     </task>
     <task id="LOCAL-00006" summary="v2">
       <created>1674870901221</created>
@@ -503,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675246737053</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="v14 获取所有员工分页查询供，涉及分页公共返回RespPageBean类、mybatis分页插件配置、全局日期转换格式、employee实体时间格式和外部表或对象处理以及数据库SQL.">
+      <created>1675247138391</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1675247138391</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
