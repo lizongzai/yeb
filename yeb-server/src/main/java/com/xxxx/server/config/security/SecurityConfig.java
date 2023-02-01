@@ -93,8 +93,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //禁用缓存
         .cacheControl();
     //添加jwt登录授权过滤器或拦截器
-    http.addFilterBefore(jwtAuthenticationTokenFilter(),
-        UsernamePasswordAuthenticationFilter.class);
+    http.addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     //添加自定义未授权和未登录结果返回
     http.exceptionHandling()
         .accessDeniedHandler(restfulAccessDeniedHandler)
@@ -127,8 +126,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         admin.setRoles(roleService.getRolesByAdminId(admin.getId()));
         return admin;
       }
-      throw new UsernameNotFoundException(
-          "SecurityConfig --> UserDetailsService: 用户名和密码不正确!");
+      throw new UsernameNotFoundException("SecurityConfig --> UserDetailsService: 用户名和密码不正确!");
     };
   }
 

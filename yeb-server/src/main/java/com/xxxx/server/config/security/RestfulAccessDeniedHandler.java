@@ -12,7 +12,7 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
 
 /**
- * 当放翁接口无权限时,自定义返回的结果
+ * 当访问接口无权限时,自定义返回的结果
  */
 @Component
 public class RestfulAccessDeniedHandler implements AccessDeniedHandler {
