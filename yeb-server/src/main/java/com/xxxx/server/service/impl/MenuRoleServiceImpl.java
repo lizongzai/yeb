@@ -9,6 +9,7 @@ import com.xxxx.server.service.IMenuRoleService;
 import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -33,6 +34,7 @@ public class MenuRoleServiceImpl extends ServiceImpl<MenuRoleMapper, MenuRole> i
    * @Description //TODO 更新角色菜单,先删除角色，然后重新添加该角色对应的菜单
    */
   @Override
+  @Transactional //添加事务注解
   public RespBean updateMenuRole(Integer rid, Integer[] mids) {
 
     //根据rid删除菜单角色
