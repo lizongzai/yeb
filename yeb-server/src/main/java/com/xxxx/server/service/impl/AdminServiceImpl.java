@@ -4,9 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xxxx.server.config.security.JwtTokenUtil;
 import com.xxxx.server.mapper.AdminMapper;
+import com.xxxx.server.mapper.AdminRoleMapper;
 import com.xxxx.server.pojo.Admin;
+import com.xxxx.server.pojo.AdminRole;
 import com.xxxx.server.pojo.RespBean;
-import com.xxxx.server.pojo.Role;
 import com.xxxx.server.service.IAdminService;
 import com.xxxx.server.utils.AdminUtils;
 import java.util.HashMap;
@@ -22,6 +23,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 /**
@@ -46,6 +48,9 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
   @Autowired
   @Resource
   private AdminMapper adminMapper;
+  @Autowired
+  @Resource
+  private AdminRoleMapper adminRoleMapper;
 
   /**
    * 登录之后返回token
@@ -113,6 +118,31 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     //获取当前登录用户ID
     //Integer adminId = ((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId();
     return adminMapper.getAllAdmins(AdminUtils.adminUtils().getId(), keywords);
+  }
+
+  /**
+   * 更新操作员角色
+   *
+   * @param adminId
+   * @param rids
+   * @return
+   */
+  @Override
+  @Transactional
+  public RespBean updateAdminRole(Integer adminId, Integer[] rids) {
+
+    //先删除操作员角色，然后在重新添加当前用户的角色
+    adminRoleMapper.delete(new QueryWrapper<AdminRole>().eq("adminId", adminId));
+    if (rids == null || rids.length == 0) {
+      return RespBean.success("更新成功");
+    }
+
+    //添加当前操作员的角色
+    Integer result = adminRoleMapper.addAdminRole(adminId,rids);
+    if (result == rids.length){
+      return RespBean.success("更新成功");
+    }
+    return RespBean.error("更新失败!");
   }
 
 }
