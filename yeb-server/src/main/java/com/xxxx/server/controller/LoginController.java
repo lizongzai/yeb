@@ -42,7 +42,7 @@ public class LoginController {
     //获取用户名
     String username = principal.getName();
     Admin admin = adminService.getAdminByUserName(username);
-    admin.setPassword(null); //设置密码为空
+    admin.setPassword(null); //设置密码为空,防止密码被非法窃取
     admin.setRoles(roleService.getRolesByAdminId(admin.getId()));
     return admin;
   }
