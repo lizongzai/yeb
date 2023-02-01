@@ -74,6 +74,5 @@ public class DepartmentServiceImpl extends ServiceImpl<DepartmentMapper, Departm
       return RespBean.success("删除成功!");
     }
     return RespBean.error("删除失败!");
-
   }
 }

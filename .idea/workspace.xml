@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="v10 职能部门代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/MenuRoleServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/RoleServiceImpl.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/yeb-server/src/main/resources/mapper/AdminMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/yeb-server/src/main/resources/mapper/DepartmentMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/yeb-server/src/main/resources/mapper/MenuMapper.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -156,7 +159,7 @@
       <workItem from="1674811256111" duration="10424000" />
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
-      <workItem from="1674886841671" duration="62647000" />
+      <workItem from="1674886841671" duration="64353000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <created>1674813511460</created>
@@ -473,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675159972774</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="v10 职能部门代码">
+      <created>1675167624274</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1675167624274</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

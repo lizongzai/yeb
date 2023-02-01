@@ -13,7 +13,7 @@
     <result column="isParent" property="isParent"/>
   </resultMap>
 
-  <!--    获取所有部门-->
+  <!--  获取所有部门-->
   <!--  使用mybatis提供的递归方式查询结果-->
   <resultMap id="DepartmentWithChildren" type="com.xxxx.server.pojo.Department"
     extends="BaseResultMap">
@@ -28,7 +28,7 @@
     , name, parentId, depPath, enabled, isParent
   </sql>
 
-  <!--    获取所有部门-->
+  <!-- 获取所有部门-->
   <select id="getAllDepartments" resultMap="DepartmentWithChildren">
     select
     <include refid="Base_Column_List"></include>
