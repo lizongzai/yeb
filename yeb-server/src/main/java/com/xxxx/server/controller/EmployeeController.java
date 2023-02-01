@@ -2,6 +2,7 @@ package com.xxxx.server.controller;
 
 
 import com.xxxx.server.pojo.Employee;
+import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.pojo.RespPageBean;
 import com.xxxx.server.service.IEmployeeService;
 import io.swagger.annotations.Api;
@@ -36,6 +37,12 @@ public class EmployeeController {
       LocalDate beginDateScope) {
 
     return employeeService.getEmployeeByPage(currentPage, size, employee, beginDateScope);
+  }
+
+  @ApiOperation(value = "获取工号")
+  @GetMapping("/maxWorkId")
+  public RespBean getMaxWorkId() {
+    return employeeService.getMaxWorkId();
   }
 
 }
