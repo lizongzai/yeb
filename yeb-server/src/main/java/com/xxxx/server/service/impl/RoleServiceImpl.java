@@ -1,20 +1,14 @@
 package com.xxxx.server.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xxxx.server.mapper.AdminRoleMapper;
-import com.xxxx.server.mapper.MenuRoleMapper;
 import com.xxxx.server.mapper.RoleMapper;
-import com.xxxx.server.pojo.Admin;
-import com.xxxx.server.pojo.AdminRole;
-import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.pojo.Role;
 import com.xxxx.server.service.IRoleService;
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>

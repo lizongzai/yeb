@@ -1,7 +1,6 @@
 package com.xxxx.server.controller;
 
 
-import com.xxxx.server.mapper.PositionMapper;
 import com.xxxx.server.pojo.Position;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.service.IPositionService;
@@ -18,7 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

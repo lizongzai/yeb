@@ -7,7 +7,6 @@ import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.service.IMenuRoleService;
 import com.xxxx.server.service.IMenuService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import java.util.stream.Collectors;
