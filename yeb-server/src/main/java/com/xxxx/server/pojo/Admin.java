@@ -10,8 +10,10 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -48,7 +50,13 @@ public class Admin implements Serializable, UserDetails {
   @ApiModelProperty(value = "联系地址")
   private String address;
 
+  /*
+  1.由于@Data注解自动生成了@Getter方法.
+  2.同时Admin实现了UserDetails，并且重写isEnabled方法。此时程序不知道使用哪个方法.
+  3.解决方法：使用@Getter(AccessLevel.NONE)注解来禁用lombok自动生成的Getter()方法
+   */
   @ApiModelProperty(value = "是否启用")
+  @Getter(AccessLevel.NONE)
   private Boolean enabled;
 
   @ApiModelProperty(value = "用户名")

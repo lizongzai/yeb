@@ -8,6 +8,7 @@ import com.xxxx.server.pojo.Admin;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.pojo.Role;
 import com.xxxx.server.service.IAdminService;
+import com.xxxx.server.utils.AdminUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -98,6 +99,20 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
   public Admin getAdminByUserName(String username) {
     return adminMapper.selectOne(
         new QueryWrapper<Admin>().eq("username", username).eq("enabled", true));
+  }
+
+
+  /**
+   * 获取所有操作员
+   *
+   * @param keywords
+   * @return
+   */
+  @Override
+  public List<Admin> getAllAdmins(String keywords) {
+    //获取当前登录用户ID
+    //Integer adminId = ((Admin) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId();
+    return adminMapper.getAllAdmins(AdminUtils.adminUtils().getId(), keywords);
   }
 
 }
