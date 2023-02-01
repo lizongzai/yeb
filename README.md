@@ -1,5 +1,6 @@
 # Backend Project: yeb
 
+![image](https://user-images.githubusercontent.com/49580847/216021344-8b215c7f-7803-44c1-9820-4757360f93e3.png)
 
 ### 1. 项目介绍
 
