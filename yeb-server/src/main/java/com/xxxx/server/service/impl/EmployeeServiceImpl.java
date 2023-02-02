@@ -11,6 +11,7 @@ import com.xxxx.server.pojo.RespPageBean;
 import com.xxxx.server.service.IEmployeeService;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Map;
@@ -94,7 +95,7 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     //算计年数，保留两位小数点
     DecimalFormat decimalFormat = new DecimalFormat("##.00");
     //强制转换Double类型
-    employee.setContractTerm(Double.parseDouble(decimalFormat.format(days/365)));
+    employee.setContractTerm(Double.parseDouble(decimalFormat.format(days / 365)));
     //System.out.println("合同年数 = " + employee.getContractTerm());
 
     //若添加成功，则返回int类型。
@@ -103,5 +104,6 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     }
     return RespBean.error("添加失败!");
   }
+
 }
 
