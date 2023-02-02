@@ -10,6 +10,8 @@ import io.swagger.annotations.ApiOperation;
 import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -44,5 +46,13 @@ public class EmployeeController {
   public RespBean getMaxWorkId() {
     return employeeService.getMaxWorkId();
   }
+
+  @ApiOperation(value = "添加员工")
+  @PostMapping("/")
+  public RespBean addEmployee(@RequestBody Employee employee) {
+    return employeeService.addEmployee(employee);
+  }
+
+
 
 }

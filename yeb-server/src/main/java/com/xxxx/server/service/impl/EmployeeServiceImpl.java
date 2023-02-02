@@ -9,7 +9,9 @@ import com.xxxx.server.pojo.Employee;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.pojo.RespPageBean;
 import com.xxxx.server.service.IEmployeeService;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;
@@ -62,7 +64,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
   public RespBean getMaxWorkId() {
 
     //获取员工Key和value
-    List<Map<String,Object>> maps = employeeMapper.selectMaps(new QueryWrapper<Employee>().select("max(workId)"));
+    List<Map<String, Object>> maps = employeeMapper.selectMaps(
+        new QueryWrapper<Employee>().select("max(workId)"));
     System.out.println("工号 = " + maps);
 
     //System.out.println("maps = " + maps);
@@ -71,7 +74,34 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     //工号强制转换整型，然后再加1
     //maps.get(0).get("max(workId)"是一个Object对象，先将其转String
     //%8d，表示不足长度时，自动左补位，补位数为0
-    return RespBean.success(null,String.format("%8d", Integer.parseInt(maps.get(0).get("max(workId)").toString()) + 1));
+    return RespBean.success(null,
+        String.format("%8d", Integer.parseInt(maps.get(0).get("max(workId)").toString()) + 1));
+  }
+
+  /**
+   * 添加员工
+   *
+   * @param employee
+   * @return
+   */
+  @Override
+  public RespBean addEmployee(Employee employee) {
+    //合同期限处理，保留两位小数
+    LocalDate beginContract = employee.getBeginContract();
+    LocalDate endContract = employee.getEndContract();
+    //计算合同总天数,使用枚举方式
+    long days = beginContract.until(endContract, ChronoUnit.DAYS);
+    //算计年数，保留两位小数点
+    DecimalFormat decimalFormat = new DecimalFormat("##.00");
+    //强制转换Double类型
+    employee.setContractTerm(Double.parseDouble(decimalFormat.format(days/365)));
+    //System.out.println("合同年数 = " + employee.getContractTerm());
+
+    //若添加成功，则返回int类型。
+    if (employeeMapper.insert(employee) == 1) {
+      return RespBean.success("添加成功!");
+    }
+    return RespBean.error("添加失败!");
   }
 }
 
