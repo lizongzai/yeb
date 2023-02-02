@@ -5,6 +5,7 @@ import com.xxxx.server.pojo.Employee;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.pojo.RespPageBean;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -43,4 +44,10 @@ public interface IEmployeeService extends IService<Employee> {
    */
   RespBean addEmployee(Employee employee);
 
+  /**
+   * 导出员工数据
+   * @param id
+   * @return
+   */
+  List<Employee> getEmployeeInfo(Integer id);
 }
