@@ -86,18 +86,22 @@ public class EmployeeController {
   @ApiOperation(value = "导出员工数据")
   @GetMapping(value = "/export", produces = "application/octet-stream")
   public void exportEmployees(HttpServletResponse response) {
+
     //查询数据
     List<Employee> employeeList = employeeService.getEmployeeInfo(null);
+
     //实例化Excel导出参数
     ExportParams params = new ExportParams("员工表", "员工表", ExcelType.HSSF);
+
     //使用ExcelExportUtil工具导出,类型为工作簿
     Workbook workbook = ExcelExportUtil.exportExcel(params, Employee.class, employeeList);
+
     OutputStream out = null;
     try {
       //流形式传输
       response.setHeader("content-type", "application/octet-stream");
       //防止乱码
-      response.setHeader("content-disposition", "attachment;filename=" + URLEncoder.encode("员工表.xls", "utf-8"));
+      response.setHeader("content-disposition","attachment;filename=" + URLEncoder.encode("员工表.xls", "utf-8"));
       //使用流导出文件
       out = response.getOutputStream();
       //保存文件,仅供下载使用
