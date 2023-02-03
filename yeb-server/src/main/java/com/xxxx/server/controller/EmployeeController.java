@@ -149,46 +149,6 @@ public class EmployeeController {
   @ApiOperation(value = "导入员工数据")
   @PostMapping("/import")
   public RespBean importEmployeeInfo(MultipartFile file) {
-//
-//    //准备导入参数
-//    ImportParams params = new ImportParams();
-//    //删除title标题行
-//    params.setTitleRows(1);
-//    //民族
-//    List<Nation> nations = nationService.list();
-//    //政治面貌
-//    List<PoliticsStatus> politicsStatuses = politicsStatusService.list();
-//    //职位
-//    List<Position> positions = positionService.list();
-//    //职称
-//    List<Joblevel> joblevels = joblevelService.list();
-//    //部门
-//    List<Department> departments = departmentService.list();
-//
-//    try {
-//      List<Employee> list = ExcelImportUtil.importExcel(file.getInputStream(), Employee.class, params);
-//      list.forEach(employee -> {
-//        //民族
-//        employee.setNationId(nations.get(nations.indexOf(new Nation(employee.getNation().getName()))).getId());
-//        //政治面貌
-//        employee.setPoliticId(politicsStatuses.get(politicsStatuses.indexOf(new PoliticsStatus(employee.getPoliticsStatus().getName()))).getId());
-//        //职位
-//        employee.setPosId(positions.get(positions.indexOf(new Position(employee.getPosition().getName()))).getId());
-//        //职称
-//        employee.setJobLevelId(joblevels.get(joblevels.indexOf(new Joblevel(employee.getJoblevel().getName()))).getId());
-//        //部门
-//        employee.setDepartmentId(departments.get(departments.indexOf(new Department(employee.getDepartment().getName()))).getId());
-//      });
-//
-//      if (employeeService.saveBatch(list)) {
-//        return RespBean.success("导入成功!");
-//      }
-//    } catch (Exception e) {
-//      e.printStackTrace();
-//    }
-//    return RespBean.error("导入失败!");
-//  }
-
     //准备导入参数
     ImportParams params = new ImportParams();
     //去掉标题行
