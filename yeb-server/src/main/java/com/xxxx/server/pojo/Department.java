@@ -11,6 +11,9 @@ import java.io.Serializable;
 import java.util.List;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 /**
  * <p>
@@ -21,7 +24,9 @@ import lombok.EqualsAndHashCode;
  * @since 2023-01-19
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
+@NoArgsConstructor  //该注解表示添加无参构造方法
+@RequiredArgsConstructor //该注解表示添加有参构造方法
+@EqualsAndHashCode(callSuper = false,of = "name") //of = "name"表示重写Equals和HashCode
 @TableName("t_department")
 @ApiModel(value = "Department对象", description = "")
 public class Department implements Serializable {
@@ -34,6 +39,7 @@ public class Department implements Serializable {
 
   @ApiModelProperty(value = "部门名称")
   @Excel(name = "部门")
+  @NonNull //表示非空
   private String name;
 
   @ApiModelProperty(value = "父id")

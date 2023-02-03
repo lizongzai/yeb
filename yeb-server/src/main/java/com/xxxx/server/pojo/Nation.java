@@ -9,6 +9,9 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 /**
  * <p>
@@ -19,7 +22,9 @@ import lombok.EqualsAndHashCode;
  * @since 2023-01-19
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
+@NoArgsConstructor  //该注解表示添加无参构造方法
+@RequiredArgsConstructor //该注解表示添加有参构造方法
+@EqualsAndHashCode(callSuper = false,of = "name") //of = "name"表示重写Equals和HashCode
 @TableName("t_nation")
 @ApiModel(value="Nation对象", description="")
 public class Nation implements Serializable {
@@ -32,6 +37,7 @@ public class Nation implements Serializable {
 
     @ApiModelProperty(value = "民族")
     @Excel(name = "民族")
+    @NonNull //表示非空
     private String name;
 
 
