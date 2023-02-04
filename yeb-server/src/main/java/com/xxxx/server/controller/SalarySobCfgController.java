@@ -38,7 +38,7 @@ public class SalarySobCfgController {
   @GetMapping("/")
   public RespPageBean getEmployeeWithSalary(@RequestParam(defaultValue = "1") Integer currentPage,
       @RequestParam(defaultValue = "10") Integer size) {
-    return employeeService.getEmployeeWithSalary(currentPage,size);
+    return employeeService.getEmployeeWithSalary(currentPage, size);
   }
 
   @ApiOperation(value = "更新员工工资账套")
