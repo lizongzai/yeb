@@ -73,87 +73,135 @@
   <!-- 获取所有员工(分页查询)-->
   <select id="getEmployeeByPage" resultMap="EmployeeInfo">
     select
-          e.*,
-          n.id as nid,
-          n.name as nname,
-          p.id as pid,
-          p.name as pname,
-          d.id as did,
-          d.name as dname,
-          j.id as jid,
-          j.name as jname,
-          pos.id as posid,
-          pos.name as posname
+    e.*,
+    n.id as nid,
+    n.name as nname,
+    p.id as pid,
+    p.name as pname,
+    d.id as did,
+    d.name as dname,
+    j.id as jid,
+    j.name as jname,
+    pos.id as posid,
+    pos.name as posname
     from
-          t_employee e,
-          t_nation n,
-          t_politics_status p,
-          t_department d,
-          t_joblevel j,
-          t_position pos
+    t_employee e,
+    t_nation n,
+    t_politics_status p,
+    t_department d,
+    t_joblevel j,
+    t_position pos
     where
-          e.nationId = n.id
-          and e.politicId = p.id
-          and e.jobLevelId = j.id
-          and e.departmentId = d.id
-          and e.posId = pos.id
-          <if test="employee.name != null and '' != employee.name">
-            AND e.name like concat('%',#{employee.name},'%')
-          </if>
-          <if test="employee.politicId != null">
-            AND e.politicId like concat('%',#{employee.politicId},'%')
-          </if>
-          <if test="employee.nationId != null">
-            AND e.nationId like concat('%',#{employee.nationId},'%')
-          </if>
-          <if test="employee.jobLevelId != null">
-            AND e.jobLevelId like concat('%',#{employee.jobLevelId},'%')
-          </if>
-          <if test="employee.posId != null">
-            AND e.posId like concat('%',#{employee.posId},'%')
-          </if>
-          <if test="employee.departmentId != null">
-            AND e.departmentId like concat('%',#{employee.departmentId},'%')
-          </if>
-          <if test="employee.engageForm != null and '' != employee.engageForm">
-            AND e.engageForm like concat('%',#{employee.engageForm},'%')
-          </if>
-          <if test="beginDateScope != null and beginDateScope.length == 2">
-            AND e.beginDate between #{beginDateScope[0]} and beginDateScope[1]
-          </if>
+    e.nationId = n.id
+    and e.politicId = p.id
+    and e.jobLevelId = j.id
+    and e.departmentId = d.id
+    and e.posId = pos.id
+    <if test="employee.name != null and '' != employee.name">
+      AND e.name like concat('%',#{employee.name},'%')
+    </if>
+    <if test="employee.politicId != null">
+      AND e.politicId like concat('%',#{employee.politicId},'%')
+    </if>
+    <if test="employee.nationId != null">
+      AND e.nationId like concat('%',#{employee.nationId},'%')
+    </if>
+    <if test="employee.jobLevelId != null">
+      AND e.jobLevelId like concat('%',#{employee.jobLevelId},'%')
+    </if>
+    <if test="employee.posId != null">
+      AND e.posId like concat('%',#{employee.posId},'%')
+    </if>
+    <if test="employee.departmentId != null">
+      AND e.departmentId like concat('%',#{employee.departmentId},'%')
+    </if>
+    <if test="employee.engageForm != null and '' != employee.engageForm">
+      AND e.engageForm like concat('%',#{employee.engageForm},'%')
+    </if>
+    <if test="beginDateScope != null and beginDateScope.length == 2">
+      AND e.beginDate between #{beginDateScope[0]} and beginDateScope[1]
+    </if>
     ORDER BY e.id
   </select>
+
+  <!--  获取所有员工工资账套-->
+  <resultMap id="EmployeeWithSalary" type="com.xxxx.server.pojo.Employee" extends="BaseResultMap">
+    <association property="salary" javaType="com.xxxx.server.pojo.Salary">
+      <id column="sid" property="id"/>
+      <result column="sbasicSalary" property="basicSalary"/>
+      <result column="sbonus" property="bonus"/>
+      <result column="slunchSalary" property="lunchSalary"/>
+      <result column="strafficSalary" property="trafficSalary"/>
+      <result column="sallSalary" property="allSalary"/>
+      <result column="spensionBase" property="pensionBase"/>
+      <result column="spensionPer" property="pensionPer"/>
+      <result column="smedicalBase" property="medicalBase"/>
+      <result column="smedicalPer" property="medicalPer"/>
+      <result column="saccumulationFundBase"
+        property="accumulationFundBase"/>
+      <result column="saccumulationFundPer"
+        property="accumulationFundPer"/>
+      <result column="sname" property="name"/>
+    </association>
+    <association property="department" javaType="com.xxxx.server.pojo.Department">
+      <result column="dname" property="name"/>
+    </association>
+  </resultMap>
 
   <!--  导出员工数据-->
   <select id="getEmployeeInfo" resultMap="EmployeeInfo">
     select
-      e.*,
-      n.id as nid,
-      n.name as nname,
-      p.id as pid,
-      p.name as pname,
-      d.id as did,
-      d.name as dname,
-      j.id as jid,
-      j.name as jname,
-      pos.id as posid,
-      pos.name as posname
+    e.*,
+    n.id as nid,
+    n.name as nname,
+    p.id as pid,
+    p.name as pname,
+    d.id as did,
+    d.name as dname,
+    j.id as jid,
+    j.name as jname,
+    pos.id as posid,
+    pos.name as posname
     from
-      t_employee e,
-      t_nation n,
-      t_politics_status p,
-      t_department d,
-      t_joblevel j,
-      t_position pos
+    t_employee e,
+    t_nation n,
+    t_politics_status p,
+    t_department d,
+    t_joblevel j,
+    t_position pos
     where
-      e.nationId = n.id
-      and e.politicId = p.id
-      and e.jobLevelId = j.id
-      and e.departmentId = d.id
-      and e.posId = pos.id
+    e.nationId = n.id
+    and e.politicId = p.id
+    and e.jobLevelId = j.id
+    and e.departmentId = d.id
+    and e.posId = pos.id
     <if test="id != null ">
       e.id = #{id}
     </if>
+  </select>
+
+
+  <!--  获取所有员工工资账套-->
+  <select id="getEmployeeWithSalary" resultMap="EmployeeWithSalary">
+    SELECT e.*,
+           td.`name`              as dname,
+           s.id                   AS sid,
+           s.`name`               AS sname,
+           s.basicSalary          AS sbasicSalary,
+           s.trafficSalary        AS strafficSalary,
+           s.lunchSalary          AS slunchSalary,
+           s.bonus                AS sbonus,
+           s.allSalary            AS sallSalary,
+           s.pensionPer           AS spensionPer,
+           s.pensionBase          AS spensionBase,
+           s.medicalPer           AS smedicalPer,
+           s.medicalBase          AS smedicalBase,
+           s.accumulationFundPer  AS saccumulationFundPer,
+           s.accumulationFundBase AS saccumulationFundBase
+    FROM t_employee as e
+           LEFT JOIN t_salary as s ON e.salaryId = s.id
+           LEFT JOIN t_department as td ON e.departmentId = td.id
+    ORDER BY e.id
   </select>
 
 </mapper>

@@ -168,4 +168,8 @@ public class Employee implements Serializable {
   @ExcelEntity(name = "职称")
   private Joblevel joblevel;
 
+  @ApiModelProperty(value = "工资账套")
+  @TableField(exist = false)
+  private Salary salary;
+
 }
