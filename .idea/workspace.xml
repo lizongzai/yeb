@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V20 增删改查员工接口,并计算合同期限及导出导入员工数据功能。">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/SalarySobCfgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_1_28_14_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_1_28_14_24__Changes_.xml" beforeDir="false" />
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V21 员工工资账套接口">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/SalaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/SalaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeEcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeEcController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,21 +165,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="30466000" />
-    </task>
-    <task id="LOCAL-00018" summary="v5">
-      <created>1674891945781</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1674891945781</updated>
-    </task>
-    <task id="LOCAL-00019" summary="v5">
-      <created>1674892335994</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1674892335994</updated>
+      <workItem from="1675262309789" duration="33267000" />
     </task>
     <task id="LOCAL-00020" summary="v5">
       <created>1674892431490</created>
@@ -518,7 +496,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675411185573</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="V20 增删改查员工接口,并计算合同期限及导出导入员工数据功能。">
+      <created>1675493120905</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1675493120905</updated>
+    </task>
+    <task id="LOCAL-00068" summary="V21 员工工资账套接口">
+      <created>1675493275421</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1675493275421</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,6 +550,7 @@
     <MESSAGE value="V19 添加员工接口,并计算合同期限" />
     <MESSAGE value="V19 增删改查员工接口,并计算合同期限" />
     <MESSAGE value="V20 增删改查员工接口,并计算合同期限及导出导入员工数据功能。" />
-    <option name="LAST_COMMIT_MESSAGE" value="V20 增删改查员工接口,并计算合同期限及导出导入员工数据功能。" />
+    <MESSAGE value="V21 员工工资账套接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="V21 员工工资账套接口" />
   </component>
 </project>
