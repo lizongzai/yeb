@@ -8,6 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -42,7 +43,7 @@ public class EmployeeEcController {
     return employeeEcService.list();
   }
 
-  @ApiOperation(value = "添加奖惩记录")
+  @ApiOperation(value = "添加奖惩")
   @PostMapping("/")
   public RespBean addEmployeeEc(@RequestBody EmployeeEc employeeEc) {
     employeeEc.setEcDate(LocalDate.now());
@@ -52,7 +53,7 @@ public class EmployeeEcController {
     return RespBean.error("添加失败!");
   }
 
-  @ApiOperation(value = "更新奖惩记录")
+  @ApiOperation(value = "更新奖惩")
   @PutMapping("/")
   public RespBean updateEmployeeEc(@RequestBody EmployeeEc employeeEc) {
     if (employeeEcService.updateById(employeeEc)) {
@@ -61,7 +62,7 @@ public class EmployeeEcController {
     return RespBean.error("修改失败");
   }
 
-  @ApiOperation(value = "删除奖惩记录")
+  @ApiOperation(value = "删除奖惩")
   @DeleteMapping("/{id}")
   public RespBean removeEmployeeEcById(@PathVariable Integer id) {
     if (employeeEcService.removeById(id)) {
@@ -69,5 +70,15 @@ public class EmployeeEcController {
     }
     return RespBean.error("删除失败!");
   }
+
+  @ApiOperation(value = "批量删除奖惩")
+  @DeleteMapping("/")
+  private RespBean deleteEmployeeEcs(Integer[] ids){
+    if (employeeEcService.removeByIds(Arrays.asList(ids))) {
+      return RespBean.success("删除成功!");
+    }
+    return RespBean.error("删除失败!");
+  }
+
 
 }

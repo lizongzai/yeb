@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V21 员工工资账套接口">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V22 奖惩类接口管理">
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeEcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/EmployeeEcController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,14 +164,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="33267000" />
-    </task>
-    <task id="LOCAL-00020" summary="v5">
-      <created>1674892431490</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1674892431490</updated>
+      <workItem from="1675262309789" duration="33577000" />
     </task>
     <task id="LOCAL-00021" summary="v5">
       <created>1674893667554</created>
@@ -510,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675493275421</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="V22 奖惩类接口管理">
+      <created>1675587096404</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1675587096404</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,6 +550,7 @@
     <MESSAGE value="V19 增删改查员工接口,并计算合同期限" />
     <MESSAGE value="V20 增删改查员工接口,并计算合同期限及导出导入员工数据功能。" />
     <MESSAGE value="V21 员工工资账套接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="V21 员工工资账套接口" />
+    <MESSAGE value="V22 奖惩类接口管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="V22 奖惩类接口管理" />
   </component>
 </project>
