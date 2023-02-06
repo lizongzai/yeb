@@ -64,6 +64,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
       @Override
       public Message<?> preSend(Message<?> message, MessageChannel channel) {
+
         StompHeaderAccessor accessor = MessageHeaderAccessor.getAccessor(message, StompHeaderAccessor.class);
 
         // 判断是否为连接，如果是， 需要获取token， 并且设置用户对象

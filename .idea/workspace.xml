@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能" />
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,21 +164,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="39913000" />
-    </task>
-    <task id="LOCAL-00026" summary="v5">
-      <created>1674972141029</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1674972141029</updated>
-    </task>
-    <task id="LOCAL-00027" summary="v5">
-      <created>1674973380341</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1674973380341</updated>
+      <workItem from="1675262309789" duration="41368000" />
     </task>
     <task id="LOCAL-00028" summary="v5">
       <created>1674973816071</created>
@@ -507,7 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675678658308</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能">
+      <created>1675678782047</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1675678782047</updated>
+    </task>
+    <task id="LOCAL-00076" summary="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能">
+      <created>1675678850764</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1675678850764</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
