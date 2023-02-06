@@ -21,6 +21,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -138,9 +139,37 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     }
 
     //添加当前操作员的角色
-    Integer result = adminRoleMapper.addAdminRole(adminId,rids);
-    if (result == rids.length){
+    Integer result = adminRoleMapper.addAdminRole(adminId, rids);
+    if (result == rids.length) {
       return RespBean.success("更新成功");
+    }
+    return RespBean.error("更新失败!");
+  }
+
+  /**
+   * 更新用户密码
+   *
+   * @param oldPass
+   * @param pass
+   * @param adminId
+   * @return
+   */
+  @Override
+  public RespBean updateAdminPassword(String oldPass, String pass, Integer adminId) {
+
+    //获取用户
+    Admin admin = (Admin) adminMapper.selectById(adminId);
+    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    //判断旧密码是否正确,若输入正确则更新新密码
+    if (encoder.matches(oldPass,admin.getPassword())) {
+      //设置新密码
+      admin.setPassword(encoder.encode(pass));
+      //更新密码
+      Integer result = adminMapper.updateById(admin);
+      //判断密码是否更新成功
+      if (result == 1) {
+        return RespBean.success("更新成功!");
+      }
     }
     return RespBean.error("更新失败!");
   }
