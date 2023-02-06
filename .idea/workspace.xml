@@ -162,21 +162,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="39612000" />
-    </task>
-    <task id="LOCAL-00024" summary="v5">
-      <created>1674899008168</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1674899008168</updated>
-    </task>
-    <task id="LOCAL-00025" summary="v5">
-      <created>1674956285025</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1674956285025</updated>
+      <workItem from="1675262309789" duration="39913000" />
     </task>
     <task id="LOCAL-00026" summary="v5">
       <created>1674972141029</created>
@@ -507,7 +493,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675678353983</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能">
+      <created>1675678377131</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1675678377131</updated>
+    </task>
+    <task id="LOCAL-00074" summary="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能">
+      <created>1675678658308</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1675678658308</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
