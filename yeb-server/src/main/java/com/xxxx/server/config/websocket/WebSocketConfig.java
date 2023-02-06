@@ -82,6 +82,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
               UserDetails userDetails = userDetailsService.loadUserByUsername(username);
               //验证token是否有效
               if (jwtTokenUtil.validateToken(authToken, userDetails)) {
+                //更新security登录用户对象
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                     userDetails, null, userDetails.getAuthorities()); //userDetails.getAuthorities()表示权限列表
                 //获取Security全局上下文
