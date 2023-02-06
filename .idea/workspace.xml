@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/CustomAuthorityDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/AdminInfoController.java" afterDir="false" />
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V24 更新个人中心">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/CustomAuthorityDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/CustomAuthorityDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/AdminInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/controller/AdminInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/pojo/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/IAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/AdminServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,21 +167,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="44831000" />
-    </task>
-    <task id="LOCAL-00030" summary="v6">
-      <created>1674973977473</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1674973977473</updated>
-    </task>
-    <task id="LOCAL-00031" summary="v6">
-      <created>1674974447107</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1674974447107</updated>
+      <workItem from="1675262309789" duration="48385000" />
     </task>
     <task id="LOCAL-00032" summary="v6">
       <created>1675058547145</created>
@@ -514,7 +498,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675687340856</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="V24 更新个人中心">
+      <created>1675690331859</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1675690331859</updated>
+    </task>
+    <task id="LOCAL-00080" summary="V24 更新个人中心">
+      <created>1675693475204</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1675693475204</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v1" />
     <MESSAGE value="v2" />
     <MESSAGE value="v3" />
     <MESSAGE value="v4" />
@@ -557,6 +554,7 @@
     <MESSAGE value="V21 员工工资账套接口" />
     <MESSAGE value="V22 奖惩类接口管理" />
     <MESSAGE value="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="V23 使用Websocket协议开发后端websocket连接和前端在线聊天功能" />
+    <MESSAGE value="V24 更新个人中心" />
+    <option name="LAST_COMMIT_MESSAGE" value="V24 更新个人中心" />
   </component>
 </project>

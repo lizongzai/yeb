@@ -26,7 +26,7 @@ import org.springframework.security.core.userdetails.UserDetails;
  * </p>
  *
  * @author lizongzai
- * @since 2023-01-19
+ * @since 2023-01-04
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -52,11 +52,6 @@ public class Admin implements Serializable, UserDetails {
   @ApiModelProperty(value = "联系地址")
   private String address;
 
-  /*
-  1.由于@Data注解自动生成了@Getter方法.
-  2.同时Admin实现了UserDetails，并且重写isEnabled方法。此时程序不知道使用哪个方法.
-  3.解决方法：使用@Getter(AccessLevel.NONE)注解来禁用lombok自动生成的Getter()方法
-   */
   @ApiModelProperty(value = "是否启用")
   @Getter(AccessLevel.NONE)
   private Boolean enabled;
@@ -80,11 +75,12 @@ public class Admin implements Serializable, UserDetails {
   @Override
   @JsonDeserialize(using = CustomAuthorityDeserializer.class)
   public Collection<? extends GrantedAuthority> getAuthorities() {
-//    List<SimpleGrantedAuthority> grantedAuthorities = roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
-    List<SimpleGrantedAuthority> authorities = roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
+    List<SimpleGrantedAuthority> authorities =
+        roles.stream()
+            .map(role -> new SimpleGrantedAuthority(role.getName()))
+            .collect(Collectors.toList());
     return authorities;
   }
-
   @Override
   public boolean isAccountNonExpired() {
     return true;
