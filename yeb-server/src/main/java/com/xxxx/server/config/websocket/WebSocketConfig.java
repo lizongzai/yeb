@@ -57,7 +57,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
       @Value("${jwt.tokenHead}")
       private String tokenHead;
-
       @Autowired
       private JwtTokenUtil jwtTokenUtil;
       @Autowired
