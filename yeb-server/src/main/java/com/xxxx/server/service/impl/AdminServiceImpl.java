@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -163,7 +164,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     //判断旧密码是否正确,若输入正确则更新新密码
     //matches方法第一个参数是原密码，第二个参数是加密后的密码
-    if (encoder.matches(oldPass,admin.getPassword())) {
+    if (encoder.matches(oldPass, admin.getPassword())) {
       //密码加密
       admin.setPassword(encoder.encode(pass));
       //更新密码
@@ -172,6 +173,34 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
       if (result == 1) {
         return RespBean.success("更新成功!");
       }
+    }
+    return RespBean.error("更新失败!");
+  }
+
+  /**
+   * 更新用户头像
+   *
+   * @param url
+   * @param userId
+   * @param authentication
+   * @return
+   */
+  @Override
+  public RespBean updateAdminFace(String url, Integer userId, Authentication authentication) {
+    //查询用户
+    Admin admin = adminMapper.selectById(userId);
+    //更新头像
+    admin.setUserFace(url);
+    int result = adminMapper.updateById(admin);
+    if (result == 1) {
+      //获取用户
+      Admin principal = (Admin) authentication.getPrincipal();
+      //全局更新头像
+      principal.setUserFace(url);
+      //更新security用户登录对象
+      SecurityContextHolder.getContext().setAuthentication(
+          new UsernamePasswordAuthenticationToken(admin, null, authentication.getAuthorities()));
+      return RespBean.success("更新成功!", url);
     }
     return RespBean.error("更新失败!");
   }
