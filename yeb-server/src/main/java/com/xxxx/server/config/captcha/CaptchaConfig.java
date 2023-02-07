@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Description //TODO 验证码配置
+ * 验证码配置
+ *
  * @Author lizongzai
  * @Since 1.0.0
  */
