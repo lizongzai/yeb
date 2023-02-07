@@ -123,25 +123,25 @@ public class FastDFSUtils {
    * @param file
    * @return
    */
-  public static String[] uploadFile(MultipartFile file) {
+  public static String[] upload(MultipartFile file) {
     String filename = file.getOriginalFilename();
-    System.out.println("文件名 = " + filename);
+    LOGGER.info("文件名: " + filename);
+    StorageClient storageClient = null;
 
     String[] uploadResults = null;
-    StorageClient storageClient = null;
     try {
+      //获取StorageClient客户端
+      storageClient = getStorageClient();
       //上传文件: 第一个参数表示字节码,第二参数表示文件后缀名,第三个参数表示描述内容，但是这里为Null
       uploadResults = storageClient.upload_file(file.getBytes(),
-          filename.substring(filename.lastIndexOf(".") + 1),
-          null);
+          filename.substring(filename.lastIndexOf(".") + 1), null);
     } catch (Exception e) {
       LOGGER.error("上传文件失败", e.getMessage());
     }
-
+    //验证上传结果
     if (uploadResults == null && storageClient != null) {
       LOGGER.error("上传文件失败", storageClient.getErrorCode());
     }
-
     //上传成功返回groupName
     LOGGER.info(
         "upload file successfully!!!" + "group_name:" + uploadResults[0] + ", remoteFileName:" + " "

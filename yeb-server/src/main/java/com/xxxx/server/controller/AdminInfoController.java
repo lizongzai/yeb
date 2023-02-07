@@ -5,6 +5,8 @@ import com.xxxx.server.pojo.Admin;
 import com.xxxx.server.pojo.RespBean;
 import com.xxxx.server.service.IAdminService;
 import com.xxxx.server.utils.FastDFSUtils;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,10 +55,11 @@ public class AdminInfoController {
 
 
   @ApiOperation(value = "更新用户头像")
+  @ApiImplicitParams({@ApiImplicitParam(name = "file", value = "头像", dataType = "MultipartFile")})
   @PutMapping("/admin/face")
   public RespBean updateAdminFace(MultipartFile file, Integer userId, Authentication authentication) {
     //获取上传文件路径
-    String[] filePath = FastDFSUtils.uploadFile(file);
+    String[] filePath = FastDFSUtils.upload(file);
 
     //获取url
     String url = FastDFSUtils.getTrackerUrl() + filePath[0] + "/" + filePath[1];
