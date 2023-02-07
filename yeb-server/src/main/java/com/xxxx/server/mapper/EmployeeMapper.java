@@ -35,7 +35,7 @@ public interface EmployeeMapper extends BaseMapper<Employee> {
    * @param id
    * @return
    */
-  List<Employee> getEmployeeInfo(@Param("id") Integer id);
+  List<Employee> getEmployeeInfo(Integer id);
 
 
   /**

@@ -16,6 +16,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
   @Autowired
   @Resource
   private EmployeeMapper employeeMapper;
+  @Autowired
+  private RabbitTemplate rabbitTemplate;
 
   /**
    * 获取所有员工(分页查询)
@@ -88,7 +91,10 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
   @Override
   public RespBean addEmployee(Employee employee) {
     //合同期限处理，保留两位小数
+
+    //合同开始日期
     LocalDate beginContract = employee.getBeginContract();
+    //合同结束日期
     LocalDate endContract = employee.getEndContract();
     //计算合同总天数,使用枚举方式
     long days = beginContract.until(endContract, ChronoUnit.DAYS);
@@ -100,6 +106,9 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 
     //若添加成功，则返回int类型。
     if (employeeMapper.insert(employee) == 1) {
+      //发送邮件
+      Employee emp = employeeMapper.getEmployeeInfo(employee.getId()).get(0);
+      rabbitTemplate.convertAndSend("mail.welcome",emp);
       return RespBean.success("添加成功!");
     }
     return RespBean.error("添加失败!");

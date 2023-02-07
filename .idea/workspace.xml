@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V27 Redis数据库配置">
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/paging/MybatisPageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/paging/MybatisPageConfig.java" afterDir="false" />
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V31 Swagger2 接口文档配置类">
+      <change afterPath="$PROJECT_DIR$/yeb-mail/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-mail/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/exception/GlobalException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +135,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MailApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="yeb-mail" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxxx.mail.MailApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xxxx.mail.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="YebApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="yeb-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxxx.server.YebApplication" />
@@ -145,6 +171,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.YebApplication (1)" />
+        <item itemvalue="Spring Boot.MailApplication" />
         <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="Application.com.xxxx.server.generator.CodeGenerator" />
       </list>
@@ -164,35 +191,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="55379000" />
-    </task>
-    <task id="LOCAL-00039" summary="v9">
-      <created>1675149793126</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1675149793127</updated>
-    </task>
-    <task id="LOCAL-00040" summary="v10 职能部门代码">
-      <created>1675155289554</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1675155289554</updated>
-    </task>
-    <task id="LOCAL-00041" summary="v10 职能部门代码">
-      <created>1675158990660</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1675158990660</updated>
-    </task>
-    <task id="LOCAL-00042" summary="v10 职能部门代码">
-      <created>1675159296083</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1675159296083</updated>
+      <workItem from="1675262309789" duration="61910000" />
     </task>
     <task id="LOCAL-00043" summary="v10 职能部门代码">
       <created>1675159382835</created>
@@ -509,7 +508,35 @@
       <option name="project" value="LOCAL" />
       <updated>1675741892015</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="V28 MybatisPage分页插件配置">
+      <created>1675741923549</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1675741923549</updated>
+    </task>
+    <task id="LOCAL-00089" summary="V29 Spring Security安全框架配置类">
+      <created>1675742011819</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1675742011819</updated>
+    </task>
+    <task id="LOCAL-00090" summary="V30 动态权限配置类">
+      <created>1675742114534</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1675742114534</updated>
+    </task>
+    <task id="LOCAL-00091" summary="V31 Swagger2 接口文档配置类">
+      <created>1675742171281</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1675742171281</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,10 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v6" />
-    <MESSAGE value="v7" />
-    <MESSAGE value="v8" />
-    <MESSAGE value="v9" />
     <MESSAGE value="v10 职能部门代码" />
     <MESSAGE value="v11 操作员增删改查代码" />
     <MESSAGE value="v12 为权限控制--&gt; 更新角色菜单接口:添加事务注解" />
@@ -552,6 +575,10 @@
     <MESSAGE value="V25 验证码配置" />
     <MESSAGE value="V26 全局异常处理" />
     <MESSAGE value="V27 Redis数据库配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="V27 Redis数据库配置" />
+    <MESSAGE value="V28 MybatisPage分页插件配置" />
+    <MESSAGE value="V29 Spring Security安全框架配置类" />
+    <MESSAGE value="V30 动态权限配置类" />
+    <MESSAGE value="V31 Swagger2 接口文档配置类" />
+    <option name="LAST_COMMIT_MESSAGE" value="V31 Swagger2 接口文档配置类" />
   </component>
 </project>
