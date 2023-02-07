@@ -23,7 +23,8 @@ import org.springframework.security.web.access.intercept.FilterSecurityIntercept
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
- * @Description //TODO security配置类
+ * Spring Security安全框架配置类
+ *
  * @Author lizongzai
  * @Since 1.0.0
  */
@@ -93,7 +94,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //禁用缓存
         .cacheControl();
     //添加jwt登录授权过滤器或拦截器
-    http.addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+    http.addFilterBefore(jwtAuthenticationTokenFilter(),
+        UsernamePasswordAuthenticationFilter.class);
     //添加自定义未授权和未登录结果返回
     http.exceptionHandling()
         .accessDeniedHandler(restfulAccessDeniedHandler)
@@ -126,7 +128,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         admin.setRoles(roleService.getRolesByAdminId(admin.getId()));
         return admin;
       }
-      throw new UsernameNotFoundException("SecurityConfig --> UserDetailsService: 用户名和密码不正确!");
+      throw new UsernameNotFoundException(
+          "SecurityConfig --> UserDetailsService: 用户名和密码不正确!");
     };
   }
 
