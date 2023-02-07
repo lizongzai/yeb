@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V31 Swagger2 接口文档配置类">
-      <change afterPath="$PROJECT_DIR$/yeb-mail/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/config/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-mail/src/main/resources/templates/mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V32 新增邮件服务功能">
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/constant/MailConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/exception/GlobalException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
     </list>
@@ -191,14 +183,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="61910000" />
-    </task>
-    <task id="LOCAL-00043" summary="v10 职能部门代码">
-      <created>1675159382835</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1675159382835</updated>
+      <workItem from="1675262309789" duration="63709000" />
     </task>
     <task id="LOCAL-00044" summary="v10 职能部门代码">
       <created>1675159485073</created>
@@ -536,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675742171281</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="V32 新增邮件服务功能">
+      <created>1675756030520</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1675756030520</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v10 职能部门代码" />
     <MESSAGE value="v11 操作员增删改查代码" />
     <MESSAGE value="v12 为权限控制--&gt; 更新角色菜单接口:添加事务注解" />
     <MESSAGE value="v13 更新操作员角色功能" />
@@ -579,6 +570,7 @@
     <MESSAGE value="V29 Spring Security安全框架配置类" />
     <MESSAGE value="V30 动态权限配置类" />
     <MESSAGE value="V31 Swagger2 接口文档配置类" />
-    <option name="LAST_COMMIT_MESSAGE" value="V31 Swagger2 接口文档配置类" />
+    <MESSAGE value="V32 新增邮件服务功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="V32 新增邮件服务功能" />
   </component>
 </project>

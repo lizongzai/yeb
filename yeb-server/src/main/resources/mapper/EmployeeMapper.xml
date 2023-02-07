@@ -149,6 +149,7 @@
   </resultMap>
 
   <!--  导出员工数据-->
+  <!--  如果传入id的值为空，那么就查询全部。否则就根据传入id编号进行查询-->
   <select id="getEmployeeInfo" resultMap="EmployeeInfo">
     select
         e.*,
@@ -175,7 +176,6 @@
         and e.jobLevelId = j.id
         and e.departmentId = d.id
         and e.posId = pos.id
-    -- 如果传入id的值为空，那么就查询全部。否则就根据传入id编号进行查询
         <if test="id != null">
           and e.id = #{id}
         </if>

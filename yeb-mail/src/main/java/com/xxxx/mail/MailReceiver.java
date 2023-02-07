@@ -1,10 +1,9 @@
 package com.xxxx.mail;
 
 
-import com.rabbitmq.client.Channel;
+import com.xxxx.server.config.constant.MailConstants;
 import com.xxxx.server.pojo.Employee;
 import java.util.Date;
-import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,7 +41,7 @@ public class MailReceiver {
   private RedisTemplate redisTemplate;
 
   //接收者监听
-  @RabbitListener(queues = "mail.welcome")
+  @RabbitListener(queues = MailConstants.MAIL_QUEUE_NAME)
   public void handler(Employee employee) {
     //创建邮件消息队列
     MimeMessage message = javaMailSender.createMimeMessage();

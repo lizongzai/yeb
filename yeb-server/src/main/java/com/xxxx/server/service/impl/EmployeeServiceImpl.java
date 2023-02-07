@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.xxxx.server.config.constant.MailConstants;
 import com.xxxx.server.mapper.EmployeeMapper;
 import com.xxxx.server.pojo.Employee;
 import com.xxxx.server.pojo.RespBean;
@@ -91,7 +92,6 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
   @Override
   public RespBean addEmployee(Employee employee) {
     //合同期限处理，保留两位小数
-
     //合同开始日期
     LocalDate beginContract = employee.getBeginContract();
     //合同结束日期
@@ -108,7 +108,7 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     if (employeeMapper.insert(employee) == 1) {
       //发送邮件
       Employee emp = employeeMapper.getEmployeeInfo(employee.getId()).get(0);
-      rabbitTemplate.convertAndSend("mail.welcome",emp);
+      rabbitTemplate.convertAndSend(MailConstants.MAIL_QUEUE_NAME, emp);
       return RespBean.success("添加成功!");
     }
     return RespBean.error("添加失败!");
@@ -135,9 +135,10 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
   @Override
   public RespPageBean getEmployeeWithSalary(Integer currentPage, Integer size) {
     //开启分页
-    Page<Employee> page = new Page<>(currentPage,size);
+    Page<Employee> page = new Page<>(currentPage, size);
     IPage<Employee> employeeIPage = employeeMapper.getEmployeeWithSalary(page);
-    RespPageBean respPageBean = new RespPageBean(employeeIPage.getTotal(),employeeIPage.getRecords());
+    RespPageBean respPageBean = new RespPageBean(employeeIPage.getTotal(),
+        employeeIPage.getRecords());
     return respPageBean;
   }
 
