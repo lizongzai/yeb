@@ -12,6 +12,8 @@ import org.springframework.security.core.GrantedAuthority;
 
 /**
  * 权限控制,判断用户角色是否为url所需的角色
+ * @author lizongzai
+ * @since 1.0.0
  */
 @Configuration
 public class CustomUrlDecisionManager implements AccessDecisionManager {
