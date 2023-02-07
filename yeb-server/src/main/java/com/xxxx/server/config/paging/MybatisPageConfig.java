@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class MybatisPageConfig {
-
   @Bean
   public PaginationInnerInterceptor paginationInnerInterceptor() {
     return new PaginationInnerInterceptor();

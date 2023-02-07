@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V25 验证码配置">
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/exception/GlobalException.java" afterDir="false" />
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V27 Redis数据库配置">
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/paging/MybatisPageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/paging/MybatisPageConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,21 +164,7 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="55277000" />
-    </task>
-    <task id="LOCAL-00037" summary="v8">
-      <created>1675068145885</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1675068145885</updated>
-    </task>
-    <task id="LOCAL-00038" summary="v8">
-      <created>1675131681737</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1675131681737</updated>
+      <workItem from="1675262309789" duration="55379000" />
     </task>
     <task id="LOCAL-00039" summary="v9">
       <created>1675149793126</created>
@@ -509,7 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675741785046</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="V26 全局异常处理">
+      <created>1675741826144</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1675741826144</updated>
+    </task>
+    <task id="LOCAL-00087" summary="V27 Redis数据库配置">
+      <created>1675741892015</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1675741892015</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,8 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v4" />
-    <MESSAGE value="v5" />
     <MESSAGE value="v6" />
     <MESSAGE value="v7" />
     <MESSAGE value="v8" />
@@ -552,6 +550,8 @@
     <MESSAGE value="V24 更新个人中心" />
     <MESSAGE value="V24 更新个人中心、用户头像" />
     <MESSAGE value="V25 验证码配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="V25 验证码配置" />
+    <MESSAGE value="V26 全局异常处理" />
+    <MESSAGE value="V27 Redis数据库配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="V27 Redis数据库配置" />
   </component>
 </project>
