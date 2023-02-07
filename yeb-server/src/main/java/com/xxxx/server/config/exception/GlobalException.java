@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @RestControllerAdvice
 public class GlobalException {
-
   @ExceptionHandler({SQLException.class})
   public RespBean mySqlException(SQLException sqlException) {
     if (sqlException instanceof SQLIntegrityConstraintViolationException) {
