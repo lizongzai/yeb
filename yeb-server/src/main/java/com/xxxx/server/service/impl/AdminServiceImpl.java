@@ -159,10 +159,12 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
 
     //获取用户
     Admin admin = (Admin) adminMapper.selectById(adminId);
+    //创建密码加密的对象
     BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     //判断旧密码是否正确,若输入正确则更新新密码
+    //matches方法第一个参数是原密码，第二个参数是加密后的密码
     if (encoder.matches(oldPass,admin.getPassword())) {
-      //设置新密码
+      //密码加密
       admin.setPassword(encoder.encode(pass));
       //更新密码
       Integer result = adminMapper.updateById(admin);
