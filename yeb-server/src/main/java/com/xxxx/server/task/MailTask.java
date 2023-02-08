@@ -61,8 +61,8 @@ public class MailTask {
 
       //通过员工id获取员工对象
       Employee employee = employeeService.getEmployeeInfo(mailLog.getEid()).get(0);
-      //      System.out.println("MailTask Employee = " + employee);
-      //      System.out.println("MailTask msgId = " + mailLog.getMsgId());
+      System.out.println("MailTask Employee = " + employee);
+      System.out.println("MailTask msgId = " + mailLog.getMsgId());
 
       //发送消息
       rabbitTemplate.convertAndSend(MailConstants.MAIL_EXCHANGE_NAME,
