@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V32 新增邮件服务功能">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/rabbitmq/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/task/MailTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V32 新增邮件服务功能和可靠性投递功能" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,14 +185,7 @@
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
       <workItem from="1675262309789" duration="64554000" />
-      <workItem from="1675835191141" duration="3882000" />
-    </task>
-    <task id="LOCAL-00045" summary="v10 职能部门代码">
-      <created>1675159972774</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1675159972774</updated>
+      <workItem from="1675835191141" duration="4234000" />
     </task>
     <task id="LOCAL-00046" summary="v10 职能部门代码">
       <created>1675167624274</created>
@@ -537,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675757756486</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="V32 新增邮件服务功能和可靠性投递功能">
+      <created>1675839426236</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1675839426236</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +548,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v11 操作员增删改查代码" />
     <MESSAGE value="v12 为权限控制--&gt; 更新角色菜单接口:添加事务注解" />
     <MESSAGE value="v13 更新操作员角色功能" />
     <MESSAGE value="v14 获取所有员工分页查询供，涉及分页公共返回RespPageBean类、mybatis分页插件配置、全局日期转换格式、employee实体时间格式和外部表或对象处理以及数据库SQL." />
@@ -580,6 +572,7 @@
     <MESSAGE value="V30 动态权限配置类" />
     <MESSAGE value="V31 Swagger2 接口文档配置类" />
     <MESSAGE value="V32 新增邮件服务功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="V32 新增邮件服务功能" />
+    <MESSAGE value="V32 新增邮件服务功能和可靠性投递功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="V32 新增邮件服务功能和可靠性投递功能" />
   </component>
 </project>

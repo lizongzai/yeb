@@ -37,10 +37,13 @@ public class RabbitMQConfig {
 
   @Bean
   public RabbitTemplate rabbitTemplate() {
+
     //开启confirms确认模式
     connectionFactory.setPublisherConfirms(true);
+
     //将缓存连接工厂注入RabbitMQ模板
     RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
+
     /**
      * 消息确认回调, 确认消息是否达到broker
      * data:消息唯一标识
