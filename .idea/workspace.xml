@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V32 新增邮件服务功能">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/constant/MailConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/config/rabbitmq/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/task/MailTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-mail/src/main/java/com/xxxx/mail/MailReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/service/impl/EmployeeServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,14 +62,15 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/IBM/totuirals/backend/yeb-back-master",
+    "last_opened_file_path": "D:/IBM/totuirals/backend/yeb",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "a3172a5285731ea5c105b4f65a1a7357"
+    "spring.configuration.checksum": "9cb8f003119b7b62708baa68857d1d68"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -160,6 +161,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="Application.com.xxxx.server.generator.CodeGenerator" />
+      <item itemvalue="Spring Boot.YebApplication" />
+      <item itemvalue="Spring Boot.YebApplication (1)" />
+      <item itemvalue="Spring Boot.MailApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.YebApplication (1)" />
@@ -183,14 +191,8 @@
       <workItem from="1674886226943" duration="513000" />
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
-      <workItem from="1675262309789" duration="63709000" />
-    </task>
-    <task id="LOCAL-00044" summary="v10 职能部门代码">
-      <created>1675159485073</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1675159485073</updated>
+      <workItem from="1675262309789" duration="64554000" />
+      <workItem from="1675835191141" duration="3882000" />
     </task>
     <task id="LOCAL-00045" summary="v10 职能部门代码">
       <created>1675159972774</created>
@@ -528,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675756030520</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="V32 新增邮件服务功能">
+      <created>1675757756486</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1675757756486</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
