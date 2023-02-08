@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V32 新增邮件服务功能和可靠性投递功能">
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/task/MailTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxxx/server/task/MailTask.java" afterDir="false" />
-    </list>
+    <list default="true" id="a668d91e-d970-47b1-bec2-5fe66934146e" name="Changes" comment="V32 新增邮件服务功能和可靠性投递功能" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,14 +185,7 @@
       <workItem from="1674886751204" duration="76000" />
       <workItem from="1674886841671" duration="82582000" />
       <workItem from="1675262309789" duration="64554000" />
-      <workItem from="1675835191141" duration="4607000" />
-    </task>
-    <task id="LOCAL-00047" summary="v10 职能部门代码">
-      <created>1675219907650</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1675219907650</updated>
+      <workItem from="1675835191141" duration="4948000" />
     </task>
     <task id="LOCAL-00048" summary="v10 职能部门代码">
       <created>1675219935498</created>
@@ -532,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675839613220</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="V32 新增邮件服务功能和可靠性投递功能">
+      <created>1675839835492</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1675839835492</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
